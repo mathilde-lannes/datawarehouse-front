@@ -16,9 +16,9 @@ export class WoundedComponent implements OnInit {
   ngOnInit() {
     this.accidentsService.getWounded()
       .subscribe(({wounded, total_accidents}) => {
+        this.value = wounded;
+        this.total = total_accidents;
       });
-      this.value = 924; // wounded;
-      this.total = 2897; // total_accidents;
     }
 
 }

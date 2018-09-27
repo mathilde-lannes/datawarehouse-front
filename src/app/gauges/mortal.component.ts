@@ -16,10 +16,9 @@ export class MortalComponent implements OnInit {
   ngOnInit() {
     this.accidentsService.getMortalAccidents()
       .subscribe(({mortal_accidents, total_accidents}) => {
-
+          this.value = mortal_accidents;
+          this.total = total_accidents;
       });
-      this.value = 1639; // mortal_accidents;
-      this.total = 2897; // total_accidents;
   }
 
 }
